@@ -14,7 +14,7 @@ const App = () => {
   const [includeSymbols, setIncludeSymbols] = useState(false)
   const handleGeneratePassword = () => {
     if (!includeUpperCase && !includeLowerCase && !includeNumbers && !includeSymbols) {
-      notify("At least one checkbox must be selected in order to generate a password.", true)
+      notify("At least one checkbox must be selected in order to generate a password😣.", true)
     }
     else {
       let characterList = ""
@@ -32,7 +32,7 @@ const App = () => {
         characterList = characterList + lowerCaseLetters
       }
       setPassword(createPassword(characterList))
-      notify("Successfully Created a Password", false)
+      notify("Successfully Created a Password🥰", false)
     }
 
 
@@ -104,28 +104,23 @@ const App = () => {
             <input className="" defaultValue={passwordLength} onChange={(e) => setPasswordLength(e.target.value)} type="number" id="password-stregth" name="password-strength" max="26" min="8" />
           </div>
           <div className="form-group">
-            <label htmlFor="include-symbols">SpecalCharacters</label>
+            <label htmlFor="include-symbols">♎SpecalCharacters</label>
             <input checked={includeSymbols} onChange={(e) => setIncludeSymbols(e.target.checked)} type="checkbox" id="include-symbols" name="include-symbols" />
           </div>
 
           <div className="form-group">
-            <label htmlFor="include-numbers">Numbers</label>
+            <label htmlFor="include-numbers">🤲Numbers</label>
             <input checked={includeNumbers} onChange={(e) => setIncludeNumbers(e.target.checked)} type="checkbox" id="include-numbers" name="include-numbers" />
           </div>
 
           <div className="form-group">
-            <label htmlFor="uppercase-letters">Uppercase Letters</label>
+            <label htmlFor="uppercase-letters"> ⏫Uppercase Letters⏫</label>
             <input checked={includeUpperCase} onChange={(e) => setIncludeUpperCase(e.target.checked)} type="checkbox" id="uppercase-letters" name="uppercase-letters" />
           </div>
           <div className="form-group">
-            <label htmlFor="lowercase-letters">Lowercase Letters</label>
+            <label htmlFor="lowercase-letters">⏬Lowercase Letters⏬</label>
             <input checked={includeLowerCase} onChange={(e) => setIncludeLowerCase(e.target.checked)} type="checkbox" id="lowercase-letters" name="lowercase-letters" />
           </div>
-         
-          
-          <button onClick={handleGeneratePassword} className="generator__btn">
-            Generate Password
-          </button>
           <ToastContainer
             position="center"
             autoClose={500}
@@ -137,6 +132,11 @@ const App = () => {
             draggable
             pauseOnHover
           />
+          
+          <button onClick={handleGeneratePassword} className="generator__btn">
+            Generate Password
+          </button>
+        Made by Vignesh
         </div>
       </div>
     </div>
