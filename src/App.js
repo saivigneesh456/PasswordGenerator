@@ -136,7 +136,6 @@ const App = () => {
           <button onClick={handleGeneratePassword} className="generator__btn">
             Generate Password
           </button>
-        Made by Vignesh
         </div>
       </div>
     </div>
